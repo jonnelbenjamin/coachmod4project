@@ -24,7 +24,33 @@ So dropping this column has little affect on the estimation of the sales price.
 
 So lets drop waterfront and renovated.
 
+We can now drop 'sqft_above' and 'sqft_basement' because they both equal 'sqft_living'
+
+We are keeping zipcode, so we will drop 'lat' and 'long'
+
 
 CHECK DUPLICATES
 Now we should check for duplicates.
 There are no duplicates.
+
+
+MODELING.ipynb
+
+What features have any correlation?
+
+Does the hypothesis test prove significance?
+
+We want to check: 
+
+For outliers
+
+For normal distributions
+
+For categorical vs. not
+
+For Drop superfluous columns
+
+For Collinearity
+
+For QQ Plots
+
