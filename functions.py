@@ -20,8 +20,9 @@ def strip_spaces(df):
     print("stripped leading/trailing spaces from all cells of string type")
 
 def check_duplicates(df):
-    if df.duplicated().sum():
-        print("there are duplicates")
+    num_of_duplicates = df.duplicated().sum()
+    if num_of_duplicates:
+        print("there are {} duplicates".format(num_of_duplicates))
     else:
         print("You're all clear of duplicates")
         
