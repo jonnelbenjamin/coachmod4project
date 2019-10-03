@@ -26,6 +26,17 @@ def check_duplicates(df):
     else:
         print("You're all clear of duplicates")
         
+# def remove_outliers_from_series(series):
+#         df.reset_index(inplace=True,drop=True)
+#         q1 = df.quantile(0.25)
+#         q3 = df.quantile(0.75)
+#         iqr = q3-q1 #Interquartile range
+#         fence = 1.5*iqr
+#         fence_low = q1-fence
+#         fence_high = q3+fence
+#         df = df.loc[(df > fence_low) & (df < fence_high)]
+        
+        
 def remove_outliers(df, col_names):
     for col in col_names:
         df.reset_index(inplace=True,drop=True)
@@ -36,6 +47,7 @@ def remove_outliers(df, col_names):
         fence_low = q1-fence
         fence_high = q3+fence
         df = df.loc[(df[col] > fence_low) & (df[col] < fence_high)]
+    df.reset_index(inplace=True,drop=True)
     return df
 
 # Useful function, but incorrectly used in this project.
